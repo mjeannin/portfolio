@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../public/css/materialize.css" media="screen,projection">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <% include ./partials/header.ejs %>
+
+            <div id="conteneur1" class="container">
+                <div class="element">
+                    <div class="row">
+                        <div class="col s12 l8">
+                            <div class="card large">
+                                <div class="card-image">
+                                    <img src="http://scd.rfi.fr/sites/filesrfi/imagecache/rfi_16x9_1024_578/sites/images.rfi.fr/files/aef_image/36244589004_68c4053e79_b_0.jpg">
+                                    <span class="card-title">INTERNATIONAL</span>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Jordanie : cultiver le désert ?</span>
+                                    <p class="chapo">Le « Sahara Forest Project » a inauguré le 7 septembre sa station de lancement en Jordanie. L’opération, menée conjointement par le gouvernement local, la Norvège et l’Union européenne, cherche à développer une agriculture durable dans cette zone aride.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a class="media blue-text" href="http://www.rfi.fr/moyen-orient/20170909-jordanie-cultiver-desert-agriculture-developpement-durable-sahara-forest-proje">RFI</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 l4">
+                            <div class="card large">
+                                <div class="card-image">
+                                    <img src="../public/img/img_cassini.jpg">
+                                    <span class="card-title">FUTUR</span>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Le 15/09, la sonde Cassini mourra pour la science</span>
+                                    <p>La mission Cassini-Huygens prendra bientôt fin, faute de carburant. La sonde avait quitté la Terre en 1997.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a class="media blue-text" href="https://usbeketrica.com/article/sonde-cassini-saturne-fin-mission">Usbek & Rica</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 l5" height="965px">
+                            <div class="col s12">
+                                <div class="card medium">
+                                    <div class="card-image">
+                                        <img src="http://lesarpenteurs.fr/wp-content/uploads/2017/09/UsbekRica-Terminator-3-609x316.jpg">
+                                        <span class="card-title">FUTUR</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title">Faut-il avoir peur des robots tueurs ?</span>
+                                        <p class="chapo">Elon Musk et des spécialistes de l’IA mettent en garde l'ONU contre les dangers de la légalisation des armes autonomes létales.</p>
+                                        <div class="card-action">
+                                            <a class="media blue-text" href="http://lesarpenteurs.fr/faut-il-avoir-peur-des-robots-tueurs/">Les Arpenteurs (Usbek & Rica)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card perso">
+                                    <div class="card-image">
+                                        <img src="http://lesarpenteurs.fr/wp-content/uploads/2017/07/UsbekRica-Expl-lunaire-1-609x316.jpg">
+                                        <span class="card-title">FUTUR</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title">L’industrie minière à la conquête de l’espace</span>
+                                        <p class="chapo">Verra-t-on bientôt une colonie minière sur la Lune ? Alléchée par la promesse de ressources extraterrestres inexploitées, l’industrie minière pourrait bien devenir le fer de lance de la conquête spatiale.</p>
+                                    </div>
+                                    <div class="card-action">
+                                        <a class="media blue-text" href="http://lesarpenteurs.fr/faut-il-avoir-peur-des-robots-tueurs/">Les Arpenteurs (Usbek & Rica)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l7 s12" height="965px">
+                            <div class="card large-large">
+                                <div class="card-image">
+                                    <img src="../public/img/img_pfe.png">
+                                    <span class="card-title">CAMPUS</span>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">42, L'école sans prof</span>
+                                    <p class="chapo">À 42, personne ou presque n’a plus de 30 ans. Cette école d’informatique fonctionne sans cours, sans
+                                        professeurs et sans horaires. Ouverte 24h sur 24 et 7 jours sur 7, elle accueille les étudiants gratuitement et sans
+                                        exigence de diplôme - pas même le bac. Reportage sur l'OVNI pédagogique de Xavier Niel.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a class="media blue-text" href="">Projet de fin d'études</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="card large" id="card_dealos">
+                                <div class="card-image">
+                                    <img src="http://scd.rfi.fr/sites/filesrfi/dynimagecache/0/9/620/350/1024/578/sites/images.rfi.fr/files/aef_image/parojinogs-620x422_0.jpg" id="img_dealos">
+                                    <span class="card-title">INTERNATIONAL</span>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Philippines: soupçonné d’être un narcotrafiquant, un maire abattu par la police</span>
+                                    <p class="chapo">Un élu local, dénoncé par le président Duterte en 2016 comme narcotrafiquant, a été abattu à son domicile ce dimanche 30 juillet par la police philippine, avec ses gardes du corps et une partie de ses proches. Des armes d’assaut et de la méthamphétamine ont été retrouvées dans les résidences du clan.</p>
+                                    <div class="card-action">
+                                        <a class="media blue-text" href="http://www.rfi.fr/asie-pacifique/20170730-philippines-narcotrafiquant-maire-abattu-police-drogue-parojinog-duterte-oza">RFI</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="card large" id="card_bangl">
+                                <div class="card-image">
+                                    <img src="http://scd.rfi.fr/sites/filesrfi/imagecache/rfi_16x9_1024_578/sites/images.rfi.fr/files/aef_image/000_del6246491_0.jpg" id="img_potiron">
+                                    <span class="card-title">INTERNATIONAL</span>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Pesticides mortels: le bilan de l’endosulfan s’alourdit au Bangladesh</span>
+                                    <p class="chapo">Après la mort de 13 enfants d’une encéphalite aigüe, en juin 2012 au Bangladesh, une première étude avait attribué les décès à une toxine présente dans les litchis. Une contre-enquête de scientifiques bangladais et américains, publiée le 24 juillet 2017, pointe la responsabilité de l’endosulfan, un pesticide ayant déjà causé des centaines de morts dans la région.</p>
+                                    <div class="card-action">
+                                        <a class="media blue-text" href="http://www.rfi.fr/asie-pacifique/20170728-morts-liees-pesticides-le-bilan-endosulfan-s-alourdit-bangladesh-environneme">RFI</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% include ./partials/footer.ejs %>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../public/js/materialize.js"></script>
+        <script type="text/javascript" src="../public/js/application.js"></script>
+    </body>
+</html>

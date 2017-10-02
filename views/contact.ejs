@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../public/css/materialize.css" media="screen,projection">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <% include ./partials/header.ejs %>
+
+        <div>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <img class="logo" src="../public/img/logo_twitter.png" alt="">
+                        Twitter
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <a href="https://twitter.com/Marinejea1">@marinejea1</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <img class="logo" src="../public/img/logo_linkedin.png" alt="">
+                        LinkedIn
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <a href="https://www.linkedin.com/in/marine-jeannin-b7520a9b/">https://www.linkedin.com/in/marine-jeannin/</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header logo">
+                        <img class="logo" src="../public/img/logo_gmail.png" alt="">
+                        Mail
+                    </div>
+                    <div class="collapsible-body">
+                        <p>marine.jeannin@sciencespo.fr</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header logo">
+                        <img class="logo" src="../public/img/logo_tel.jpg" alt="">
+                        Portable
+                    </div>
+                    <div class="collapsible-body">
+                            <p>06 62 70 23 15</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <% include ./partials/footer.ejs %>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../public/js/materialize.min.js"></script>
+    </body>
+</html>
