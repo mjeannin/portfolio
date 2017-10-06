@@ -131,12 +131,29 @@ nav{
     height:295px;
 }
 
+#cv_prez2{
+    margin-top: 22px;
+}
+
+#cv_pic{
+    height:200px;
+}
+
+#cv_title{
+    text-align: center;
+    font-size:large;
+}
+
 #medium_logo{
     height:50px;
 }
 
 #small_logo{
     height:30px;
+}
+
+#card_formation{
+    height: 355px;
 }
 
 #tiny_logo{
