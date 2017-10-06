@@ -124,7 +124,15 @@ nav{
 }
 
 .taille{
-    height:550px;
+    height:650px;
+}
+
+#cv_container{
+    min-width:500px;
+}
+
+#cv_header{
+    background-color: rgba(193, 193, 193, 0.17)
 }
 
 #cv_prez{
@@ -137,6 +145,7 @@ nav{
 
 #cv_pic{
     height:200px;
+    margin-bottom: 30px;
 }
 
 #cv_title{
@@ -158,4 +167,8 @@ nav{
 
 #tiny_logo{
     height:20px;
+}
+
+.margin-top-60{
+    margin-top: 60px;
 }
