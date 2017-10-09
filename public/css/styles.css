@@ -7,6 +7,14 @@ body{
     height:100%;
 }
 
+a{
+    color: black;
+}
+
+li{
+    list-style-type: circle; !important
+}
+
 #conteneur_global
 {
     display: flex;
@@ -18,7 +26,7 @@ body{
 {
     display: flex;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 #conteneur2
@@ -100,6 +108,20 @@ nav{
 
 #card_dealos{
     height: 485px;
+}
+
+#chapo-ralliements-part2{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+#chapo-une-macron-part2{
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.li-point{
+    list-style-type: disc;
 }
 
 #footer {
