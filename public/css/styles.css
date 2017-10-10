@@ -147,6 +147,10 @@ nav{
     border-radius: 2px;
 }
 
+.line{
+    display: none;
+}
+
 /*CV*/
 
 .para{
