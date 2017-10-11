@@ -28,4 +28,4 @@ app.get('/pfe', function(req, res){
     res.render('index_pfe');
 });
 
-app.listen(3002);
+app.listen(80);
