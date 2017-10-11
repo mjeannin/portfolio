@@ -33,4 +33,4 @@ app.get('*', function(req, res){
     res.render('error404');
 });
 
-app.listen(3002);
+app.listen(80);
