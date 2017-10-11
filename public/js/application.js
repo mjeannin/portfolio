@@ -36,7 +36,16 @@ var options = [
     {selector: '#line1', offset: 13800, callback: function(el) { $("#line24").show() } },
     {selector: '#line1', offset: 14400, callback: function(el) { $("#line25").show() } },
     {selector: '#line1', offset: 15000, callback: function(el) { $("#line26").show() } },
-    {selector: '#line1', offset: 15600, callback: function(el) { $("#line27").show() } }
+    {selector: '#line1', offset: 15600, callback: function(el) { $("#line27").show() } },
+    {selector: '#line1', offset: 15900, callback: function(el) { $("#line28").show() } },
+    {selector: '#line1', offset: 16400, callback: function(el) { $("#line29").show() } },
+    {selector: '#line1', offset: 17000, callback: function(el) { $("#line30").show() } },
+    {selector: '#line1', offset: 17600, callback: function(el) { $("#line31").show() } },
+    {selector: '#line1', offset: 18200, callback: function(el) { $("#line32").show() } },
+    {selector: '#line1', offset: 18800, callback: function(el) { $("#line33").show() } },
+    {selector: '#line1', offset: 19400, callback: function(el) { $("#line34").show() } },
+    {selector: '#line1', offset: 20000, callback: function(el) { $("#line35").show() } },
+    {selector: '#line1', offset: 20600, callback: function(el) { $("#line36").show() } }
 ];
 Materialize.scrollFire(options);
 
