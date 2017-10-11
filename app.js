@@ -28,4 +28,9 @@ app.get('/pfe', function(req, res){
     res.render('index_pfe');
 });
 
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+    res.render('error404');
+});
+
 app.listen(80);

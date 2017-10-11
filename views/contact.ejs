@@ -7,6 +7,7 @@
         <link type="text/css" rel="stylesheet" href="../public/css/materialize.css" media="screen,projection">
         <link rel="stylesheet" href="../public/css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/png" href="/public/img/favicon.png" />
     </head>
 
     <body>
@@ -14,11 +15,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="col offset-s4 s4">
+                <div class="col s6 offset-s3">
                     <ul class="collapsible" data-collapsible="accordion">
                         <li>
                             <div class="collapsible-header">
-                                <img class="logo" src="../public/img/logo_twitter.png" alt="">
+                                <img class="logo" src="/public/img/logo_twitter.png" alt="">
                             </div>
                             <div class="collapsible-body">
                                 <p>
@@ -28,7 +29,7 @@
                         </li>
                         <li>
                             <div class="collapsible-header">
-                                <img class="logo" src="../public/img/logo_linkedin.png" alt="">
+                                <img class="logo" src="/public/img/logo_linkedin.png" alt="">
                             </div>
                             <div class="collapsible-body">
                                 <p>
@@ -38,7 +39,7 @@
                         </li>
                         <li>
                             <div class="collapsible-header logo">
-                                <img class="logo" src="../public/img/logo_gmail.png" alt="">
+                                <img class="logo" src="/public/img/logo_gmail.png" alt="">
                             </div>
                             <div class="collapsible-body">
                                 <p>marine.jeannin@sciencespo.fr</p>
@@ -46,13 +47,24 @@
                         </li>
                         <li>
                             <div class="collapsible-header logo">
-                                <img class="logo" src="../public/img/logo_tel.jpg" alt="">
+                                <img class="logo" src="/public/img/logo_tel.jpg" alt="">
                             </div>
                             <div class="collapsible-body">
                                     <p>06 62 70 23 15</p>
                             </div>
                         </li>
                     </ul>
+
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger col s6 offset-s3" href="#modal1">Curriculum Vitae</a>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <% include ./partials/cv.ejs %>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
                 </div>
             </div>
         </div>

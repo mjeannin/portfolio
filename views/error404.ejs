@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/public/css/materialize.css" media="screen,projection">
+        <link rel="stylesheet" href="/public/css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/png" href="/public/img/favicon.png" />
+    </head>
+    
+    <body>
+        <% include ./partials/header.ejs %>
+
+        <img src="/public/img/error404.jpg" alt="">
+
+        <div id="back-to-articles">
+            <a class="waves-effect waves-light btn modal-trigger" href="/">Retour à l'accueil</a>
+        </div>
+        
+        <% include ./partials/footer.ejs %>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/public/js/materialize.js"></script>
+        <script type="text/javascript" src="/public/js/application.js"></script>
+    </body>
+</html>

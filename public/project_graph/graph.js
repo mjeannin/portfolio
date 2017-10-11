@@ -198,13 +198,13 @@ window.onload = function(){
     return false;
   }, true);
 
-  d3.json('project_graph/graph.json', function(error, data){
+  d3.json('/project_graph/graph.json', function(error, data){
     if (error){throw error;}
     data.forEach(function(node){
       node.selected = false;
-    })
+    });
     global.data = data;
-  })
+  });
 
   function map_view(v, data){
     var caminx, caminy, camaxx, camaxy;
