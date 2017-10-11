@@ -125,7 +125,7 @@ nav{
 }
 
 #footer {
-    position: static;
+    position: fixed;
     left:0;
     bottom:0;
     width:100%;
@@ -149,6 +149,28 @@ nav{
 
 .line{
     display: none;
+}
+
+#back-to-articles{
+    text-align: center;
+    margin-top:50px;
+}
+
+#prez{
+    width: 55%;
+    color: black;
+    text-align: left;
+    line-height: 32px;
+    margin:auto;
+}
+
+#prez_content{
+    padding: 130px;
+}
+
+#about_title{
+    margin-bottom: 28px;
+    margin-left: -5px;
 }
 
 /*CV*/
