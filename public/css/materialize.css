@@ -6369,6 +6369,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   left: 0;
   height: 100%;
   font-size: 1rem;
+  margin-top: -10px;
   cursor: text;
   -webkit-transition: -webkit-transform .2s ease-out;
   transition: -webkit-transform .2s ease-out;

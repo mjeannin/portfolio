@@ -173,6 +173,24 @@ nav{
     margin-left: -5px;
 }
 
+#search {
+    height: 64px;
+}
+
+#mobile-search{
+    height: 64px;
+    background-color: #484c5f;
+}
+
+#mobile-search:focus{
+    height: 64px;
+    background-color: white;
+}
+
+#loupe-de-merde{
+    margin-top: -12px;
+}
+
 /*CV*/
 
 .para{
