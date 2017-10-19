@@ -64,7 +64,19 @@ var options = [
     {selector: '#line1', offset: 29600, callback: function() { $("#line52").show() } },
     {selector: '#line1', offset: 30200, callback: function() { $("#line53").show() } },
     {selector: '#line1', offset: 30800, callback: function() { $("#line54").show() } },
-    {selector: '#line1', offset: 31400, callback: function() { $("#line55").show() } }
+    {selector: '#line1', offset: 31400, callback: function() { $("#line55").show() } },
+    {selector: '#line1', offset: 31900, callback: function() { $("#line56").show() } },
+    {selector: '#line1', offset: 32500, callback: function() { $("#line57").show() } },
+    {selector: '#line1', offset: 33100, callback: function() { $("#line58").show() } },
+    {selector: '#line1', offset: 33700, callback: function() { $("#line59").show() } },
+    {selector: '#line1', offset: 34300, callback: function() { $("#line60").show() } },
+    {selector: '#line1', offset: 34900, callback: function() { $("#line61").show() } },
+    {selector: '#line1', offset: 35500, callback: function() { $("#line62").show() } },
+    {selector: '#line1', offset: 40000, callback: function() { $("#line63").show() } },
+    {selector: '#line1', offset: 40600, callback: function() { $("#line64").show() } },
+    {selector: '#line1', offset: 41200, callback: function() { $("#line65").show() } },
+    {selector: '#line1', offset: 41800, callback: function() { $("#line66").show() } },
+    {selector: '#line1', offset: 42400, callback: function() { $("#line67").show() } }
 ];
 Materialize.scrollFire(options);
 
