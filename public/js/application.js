@@ -76,7 +76,15 @@ var options = [
     {selector: '#line1', offset: 40600, callback: function() { $("#line64").show() } },
     {selector: '#line1', offset: 41200, callback: function() { $("#line65").show() } },
     {selector: '#line1', offset: 41800, callback: function() { $("#line66").show() } },
-    {selector: '#line1', offset: 42400, callback: function() { $("#line67").show() } }
+    {selector: '#line1', offset: 42400, callback: function() { $("#line67").show() } },
+    {selector: '#line1', offset: 42900, callback: function() { $("#line68").show() } },
+    {selector: '#line1', offset: 43500, callback: function() { $("#line69").show() } },
+    {selector: '#line1', offset: 44100, callback: function() { $("#line70").show() } },
+    {selector: '#line1', offset: 44700, callback: function() { $("#line71").show() } },
+    {selector: '#line1', offset: 45300, callback: function() { $("#line72").show() } },
+    {selector: '#line1', offset: 45900, callback: function() { $("#line73").show() } },
+    {selector: '#line1', offset: 46500, callback: function() { $("#line74").show() } },
+    {selector: '#line1', offset: 47100, callback: function() { $("#line75").show() } }
 ];
 Materialize.scrollFire(options);
 
