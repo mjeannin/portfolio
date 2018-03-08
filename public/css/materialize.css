@@ -2615,14 +2615,16 @@ a {
 .hoverable {
   -webkit-transition: -webkit-box-shadow .25s;
   transition: -webkit-box-shadow .25s;
-  transition: box-shadow .25s;
-  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  transition: box-shadow .25s ease-out, opacity .25s ease-out;
+  transition: box-shadow .25s, -webkit-box-shadow .25s ease-out, opacity .25s ease-out;
 }
 
 .hoverable:hover {
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: 0.6;
+  transition: box-shadow .25s ease-out, opacity .25s ease-out;
+  transition: box-shadow .25s, -webkit-box-shadow .25s ease-out, opacity .25s ease-out;
 }
 
 .divider {
@@ -4267,7 +4269,7 @@ nav .button-collapse i {
 
 nav .brand-logo {
   position: absolute;
-  color: #fff;
+  color: black;
   display: inline-block;
   font-size: 2.1rem;
   padding: 0;
