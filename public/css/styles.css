@@ -22,6 +22,11 @@ li{
     margin-left:5%;
 }
 
+#conteneur{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #conteneur1
 {
     display: flex;
@@ -207,7 +212,7 @@ nav{
 }
 
 .cv_logo{
-    height:70px;
+    height:50px;
     float: right;
 }
 
@@ -280,4 +285,13 @@ nav{
 #custom_logo{
     height:30px;
     margin-top: 27px;
+}
+
+.part{
+    margin:10px;
+}
+
+#part3{
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
