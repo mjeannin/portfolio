@@ -71,6 +71,10 @@ img.logo{
     height:30px;
 }
 
+.logo_search{
+    text-align: center;
+}
+
 #nav {
     margin-left: 17%;
     margin-right: 16%;
