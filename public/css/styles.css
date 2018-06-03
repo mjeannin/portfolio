@@ -27,6 +27,10 @@ li{
     flex-wrap: wrap;
 }
 
+#conteneur_part1
+{
+}
+
 #conteneur1
 {
     display: flex;
@@ -213,7 +217,6 @@ nav{
 
 .cv_logo{
     height:50px;
-    float: right;
 }
 
 .taille{
