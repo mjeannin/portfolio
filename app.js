@@ -13,15 +13,8 @@ app.set('view engine', 'ejs');
 // GET
 
 app.get('/', function(req, res){
-    res.render('index');
-});
-
-app.get('/cv', function(req, res){
-    res.render('cv');
-});
-
-app.get('/contact', function(req, res){
-    res.render('contact');
+    var jsonString = JSON.stringify('public/Publication.json');
+    res.render('index', jsonString );
 });
 
 app.get('/pfe', function(req, res){
