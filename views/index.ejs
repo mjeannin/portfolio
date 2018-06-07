@@ -14,8 +14,6 @@
 
 <body>
 
-    <% include ./partials/header.ejs %>
-
     <div class="container">
         <div class="row">
             <div class="col s2">
@@ -29,6 +27,7 @@
             <div class="col s4">
                 <% include ./partials/part3.ejs %>
             </div>
+            <div id="jdata"></div>
         </div>
     </div>
 
@@ -36,5 +35,29 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/public/js/materialize.js"></script>
 <script type="text/javascript" src="/public/js/application.js"></script>
+<script>
+    var jdata = document.getElementById(jdata);
+    console.log("jdata is " + jdata);
+    var requestURL = '/public/Publication.js';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+
+    request.onload = function() {
+        var data = request.response;
+        generateData(data);
+    }
+    console.log("data is " + data);
+
+    function generateData(jsonObj) {
+        var myDate = document.createElement('h1');
+        myDate.textContent = jsonObj['Date'];
+        jdata.appendChild(myDate);
+
+//        var myPara = document.createElement('p');
+//        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+//        header.appendChild(myPara);
+    }
+    console.log("myDate is " + myDate);
+</script>
 </body>
 </html>

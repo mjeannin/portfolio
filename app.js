@@ -13,8 +13,8 @@ app.set('view engine', 'ejs');
 // GET
 
 app.get('/', function(req, res){
-    var jsonString = JSON.stringify('public/Publication.json');
-    res.render('index', jsonString );
+    var config = require('./public/Publication.json');
+    res.render('index', config);
 });
 
 app.get('/pfe', function(req, res){
