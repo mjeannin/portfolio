@@ -75,6 +75,18 @@ img.logo{
     text-align: center;
 }
 
+#logo_bfmtv{
+    width: 50%;
+}
+
+#logo_rfi{
+    width: 40%;
+}
+
+#logo_pm{
+    width: 70%;
+}
+
 #nav {
     margin-left: 17%;
     margin-right: 16%;
@@ -217,10 +229,6 @@ nav{
 
 .para{
     padding: 7px !important;
-}
-
-.cv_logo{
-    height:50px;
 }
 
 .taille{

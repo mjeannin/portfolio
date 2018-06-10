@@ -95,7 +95,7 @@ var options = [
 ];
 Materialize.scrollFire(options);
 
-M.AutoInit();
+//M.AutoInit();
 
 // SCROLL TOP
 
@@ -146,19 +146,17 @@ $(function() {
 
 // Menu
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-});
+//document.addEventListener('DOMContentLoaded', function() {
+  //  var elems = document.querySelectorAll('.sidenav');
+  //  var instances = M.Sidenav.init(elems, options);
+//});
 
- var collapsibleElem = document.querySelector('.collapsible');
- var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+ //var collapsibleElem = document.querySelector('.collapsible');
+ //var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
 
-
-
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-});
+//$(document).ready(function(){
+//  $('.sidenav').sidenav();
+//});
 
 // JSON DATA
 

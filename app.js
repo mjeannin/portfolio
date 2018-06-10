@@ -17,6 +17,11 @@ app.get('/', function(req, res){
     res.render('index', config);
 });
 
+app.get('/pub', function(req, res){
+    var config = require('./public/Publication.json');
+    res.send(config);
+});
+
 app.get('/pfe', function(req, res){
     res.render('index_pfe');
 });
