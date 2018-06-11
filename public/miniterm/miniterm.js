@@ -1,49 +1,50 @@
-class File {
-  constructor(name) {
-    this.name = name;
-    this.comment = '';
-  }
-}
+var select = function(tree, path) {
+  console.log(tree);
+  console.log(path);
+  var ret = tree;
+  path.forEach(function(entry) {
+    ret = ret[entry];
+  });
+  return ret;
+};
 
-class Folder {
-  constructor(name) {
-    this.name = name;
-    this.childs = {}
+var lslist = function(node) {
+  if (typeof node === "object") {
+    return Object.keys(node).join("<br>");
   }
-}
+  return "";
+};
 
-class FileSystem {
-  constructor() {
-    this.root = new Folder('~');
+var cd = function(tree, path, dir, err) {
+  if (dir == "..") {
+    path = path.splice(-1, 1);
   }
-  find_parent (pwd) {
-    var folder = this.root;
-    var previous_folder = folder;
-    pwd.slice(1).forEach(function(fname){
-      previous_folder = folder;
-      folder = folder.childs[fname];
-    });
-    return folder;
+  else if (dir in select(tree, path)) {
+    path.push(dir);
   }
+  else {
+    err = "No such directory: " + dir;
+    return true;
+  }
+  return false;
 }
-var filetree = new FileSystem();
 
 class Shell {
   constructor () {
-    this.pwd = ['~'];
-    this.current_folder = filetree.root;
-    this.prev = this.current_folder;
+    this.pwd = ["~"];
+    this.filetree = {"~":{}};
   }
   get_pwd () {
+    console.log(this.pwd);
+    console.log(this.filetree);
     return this.pwd;
   }
   create_dir (dirname) {
-    if (this.current_folder.childs[dirname] != undefined){
+    if (dirname in select(this.filetree, this.pwd)) {
       return false;
-    } else {
-      this.current_folder.childs[dirname] = new Folder(dirname);
-      return true;
     }
+    select(this.filetree, this.pwd)[dirname] = {};
+    return true;
   }
 }
 var shell = new Shell();
@@ -80,39 +81,31 @@ commands.mkdir = function(args){
 }
 
 commands.ls = function(args){
-  var names = [];
-
   if (args.length > 2){
     return 'Erreur';
-  } else if (args.length == 2) {
-    var nodes = shell.current_folder.childs[args[1]].childs;
-    return names.join('<br>');
-  } else {
-    var nodes = shell.current_folder.childs;
   }
-    for(var index in nodes) {
-       if (nodes.hasOwnProperty(index)) {
-           names.push(index);
-       }
+  else if (args.length == 2) {
+    if (args[1] in select(shell.filetree, shell.pwd)) {
+      return lslist(select(shell.filetree, (Object.assign(shell.pwd)).concat(args[1])));
     }
-    return names.join('<br>');
+    else
+      return "No such directory: " + args[1];
+  }
+  else {
+    return lslist(select(shell.filetree, shell.pwd));
+  }
 }
 
 commands.cd = function(args){
   if (args.length != 2){
     return 'Erreur';
   } else{
-    if (args[1] == '..'){
-      shell.current_folder = filetree.find_parent(shell.pwd);
-      shell.pwd = shell.pwd.slice(0, shell.pwd.length - 1);
+    var err;
+    if (cd(shell.filetree, shell.pwd, args[1], err)) {
+      return err;
+    }
+    else {
       return '';
-    } else if (shell.current_folder.childs[args[1]] != undefined){
-      shell.prev = shell.current_folder;
-      shell.current_folder = shell.current_folder.childs[args[1]];
-      shell.pwd.push(args[1]);
-      return '';
-    } else {
-      return 'No such directory';
     }
   }
 }
