@@ -20,7 +20,7 @@
     outline-color: transparent;
     z-index: 2;
     position: relative;
-    line-height: 1em
+    line-height: 1em;
 }
 
 #terminal p {
