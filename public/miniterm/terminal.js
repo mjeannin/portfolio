@@ -20,7 +20,7 @@ var Terminal = (function() {
             newPrompt.querySelector(".prompt").textContent = self.prompt;
         }
         terminal.appendChild(newPrompt);
-        newPrompt.querySelector(".input").innerHTML = " ";
+        newPrompt.querySelector(".input").innerHTML = "";
         newPrompt.querySelector(".input").focus();
     };
 
@@ -74,45 +74,41 @@ var Terminal = (function() {
 
     self.init = function(elem, commands) {
         self.commands = commands;
-
-        elem.addEventListener("keydown", function(event) {
-            if(event.keyCode == KEY_TAB) {
-                var prompt = event.target;
-                var suggestions = autoCompleteInput(prompt.textContent.replace(/\s+/g, ""));
-
-                if(suggestions.length == 1) {
-                    prompt.textContent = suggestions[0];
-                    var range = document.createRange();
-                    var sel = window.getSelection();
-                    range.setStart(prompt.childNodes[0], suggestions[0].length);
-                    range.collapse(true);
-                    sel.removeAllRanges();
-                    sel.addRange(range);
-                }
-
-                event.preventDefault(true);
-                return false;
-            }
-        });
-
-        elem.addEventListener("keyup", function(event) {
-            if(historyIndex < 0) return;
-            browseHistory(event.target, event.keyCode);
-        });
-
         elem.addEventListener("keypress", function(event) {
             var prompt = event.target;
-            if(event.keyCode != 13) return false;
+           if(event.keyCode == 13){
 
-            updateHistory(prompt.textContent);
+              updateHistory(prompt.textContent);
 
-            var input = prompt.textContent.split(" ");
-            if(input[0] && input[0] in self.commands) {
-                runCommand(elem, input[0], input);
-            }
+              var input = prompt.textContent.split(" ").filter(item => item);
+              if(input[0] && input[0] in self.commands) {
+                 console.log(prompt.textContent);
+                 runCommand(elem, input[0], input);
+              }
 
-            resetPrompt(elem, prompt);
-            event.preventDefault();
+              resetPrompt(elem, prompt);
+              event.preventDefault();
+           }
+           else if(event.keyCode == KEY_TAB) {
+              var prompt = event.target;
+              var suggestions = autoCompleteInput(prompt.textContent.replace(/\s+/g, ""));
+              if(suggestions.length == 1) {
+                 prompt.textContent = suggestions[0];
+                 var range = document.createRange();
+                 var sel = window.getSelection();
+                 range.setStart(prompt.childNodes[0], suggestions[0].length);
+                 range.collapse(true);
+                 sel.removeAllRanges();
+                 sel.addRange(range);
+              }
+              event.preventDefault(true);
+              return false;
+           }
+           else {
+
+              if(historyIndex < 0) return;
+              browseHistory(event.target, event.keyCode);
+           }
         });
 
         elem.querySelector(".input").focus();
@@ -122,8 +118,18 @@ var Terminal = (function() {
     return self;
 })();
 
+function moveCursorToEnd(el) {
+    if (typeof el.selectionStart == "number") {
+        el.selectionStart = el.selectionEnd = el.value.length;
+    } else if (typeof el.createTextRange != "undefined") {
+        el.focus();
+        var range = el.createTextRange();
+        range.collapse(false);
+        range.select();
+    }
+}
 // Component
-
+var termDiv = undefined;
 var FakeTerminal = undefined;
 (function(currentScript) {
 
@@ -145,10 +151,24 @@ var FakeTerminal = undefined;
       this.ready = true
       this.terminal        = window.Terminal.init(this.root.getElementById("terminal"), {});
       this.terminal.prompt = this.root.querySelector("content").getDistributedNodes()[0].textContent;
+      termDiv = this.root.getElementById("terminal");
+      termDiv.addEventListener("click",function(e){
+          var input;
+          try {
+              input = termDiv.lastChild.getElementsByClassName("input")[0];
+          } catch(e) {
+              input = termDiv.getElementsByClassName("input")[0];
+          }
+          try {
+              input.focus({preventScroll:false});
+              moveCursorToEnd(input);
+          }
+          catch(e) {console.log("ERROR");}
+      },false);
 
       if(this.onload) {
-        console.log('onload')
-        this.onload()
+          console.log('onload')
+          this.onload()
       }
 
   };
