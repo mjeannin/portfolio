@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Accueil</title>
     <script type="text/javascript" src="/public/js/jsontohtml.js"></script>
-
+    <script src="ejs.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../public/css/materialize.css" media="screen,projection">
     <link rel="stylesheet" href="../public/css/styles.css">
@@ -22,11 +22,9 @@
                 <% include ./partials/part1.ejs %>
             </div>
 
-            <div class="col s6">
-                <% var titre = "tmp" %>
-                <% var chapo = "tmp" %>
-                <% var image = "tmp" %>
-                <% include ./partials/part2.ejs %>
+            <div id="articles" class="col s6">
+            <button id="buton">click me</button>
+            <script src="/public/js/test.js"></script>
             </div>
 
             <div class="col s4">

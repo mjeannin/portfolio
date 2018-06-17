@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const articles = require('./public/js/findArticles.js');
 
 // USE
 
@@ -12,9 +13,14 @@ app.set('view engine', 'ejs');
 
 // GET
 
+app.use('/', express.static(__dirname + '/node_modules/ejs'));
 app.get('/', function(req, res){
     var config = require('./public/Publication.json');
     res.render('index', config);
+});
+
+app.get('/articles/:id', function(req, res){
+    res.send(articles.getArticles(req.params.id));
 });
 
 app.get('/pub', function(req, res){
