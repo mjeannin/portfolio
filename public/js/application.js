@@ -160,3 +160,16 @@ $(function() {
 
 // JSON DATA
 
+$(function() {
+    $(window).scroll(function() {
+        //Position du scroll + moitié de l'écran visible
+        var scroll = $(this).scrollTop();
+        $('.side-panel').each(function() {
+            if (scroll > $(this).offset().top) {
+                $(this).removeClass('right-panel')
+            } else {
+                $(this).addClass('right-panel')
+            }
+        });
+    });
+});
