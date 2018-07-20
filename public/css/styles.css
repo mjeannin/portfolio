@@ -310,3 +310,8 @@ nav{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+.img-fit{
+    object-fit: cover;
+    height: 280px;
+}

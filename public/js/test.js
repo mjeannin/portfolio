@@ -1,7 +1,4 @@
 
-var buton=document.getElementById("buton");
-buton.addEventListener("click", myFun);
-
 var id = -1;
 
 function myFun(){
@@ -9,7 +6,7 @@ function myFun(){
     var req = new XMLHttpRequest();
     req.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var html = ejs.render('<div class="element card large card-panel part"> <a target="_blank" href=<%=Lien %>> <div class="card large card-panel hoverable"> <div class="card-image"> <img src=<%=Image %>> <span class="card-title" id="jrub"><%=Titre %></span> </div><div class="card-content"> <span class="card-title" id="jtitle"><%=Chapo %></span> <p class="chapo" id="jchapo"></p></div><div class="card-action"> <a target="_blank" id="toto" class="media blue-text" href=<%=Lien %>>LINK</a> </div></a> </div></div>',
+            var html = ejs.render('<div class="card"> <a target="_blank" href=<%=Lien %>> <div class="card-image large"> <img class="img-fit" src=<%=Image %>> <span class="card-title" id="jrub"><%=Titre %></span> </div><div class="card-content"> <span class="card-title" id="jtitle"><%=Chapo %></span> <p class="chapo" id="jchapo"></p></div><div class="card-action"> <a target="_blank" id="toto" class="media blue-text" href=<%=Lien %>>LINK</a> </div></a> </div>',
                 JSON.parse(this.responseText));
             var div = document.createElement('div')
             div.innerHTML = html;
