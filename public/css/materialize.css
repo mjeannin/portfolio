@@ -4861,6 +4861,7 @@ small {
   left: 0;
   max-width: 100%;
   padding: 24px;
+  text-shadow: 0px 0px 9px #777;
 }
 
 .card .card-content {
