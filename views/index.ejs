@@ -19,18 +19,17 @@
 
     <div class="container">
         <div class="row">
-            <div class="col m3 xl2 hide-on-small-only">
+            <div class="parentLeft col m3 xl2 l2 hide-on-small-only">
                 <% include ./partials/part1.ejs %>
             </div>
 
-            <div id="articles" class="col s12 m8 xl7">
-            <script src="/public/js/test.js"></script>
+            <div id="articles" class="col s12 m9 xl7 l7">
+            <script src="/public/js/loadArticles.js"></script>
             </div>
 
-            <div class="col s4 xl3">
+            <div class="parentRight col s4 xl3 l3 hide-on-med-and-down">
                 <% include ./partials/part3.ejs %>
             </div>
-            <div id="jdata"></div>
         </div>
     </div>
 
@@ -38,55 +37,5 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/public/js/materialize.js"></script>
 <script type="text/javascript" src="/public/js/application.js"></script>
-<script>
-    var jdata = document.getElementById("jdata");
-    console.log("jdata is " + jdata);
-    var requestURL = '/pub';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-
-    request.onload = function() {
-        var data = request.response;
-        console.log("data is " + data);
-        //generateData(data);
-        generateData({
-            "Date": "11/08/2016",
-            "Titre": "La Manif pour tous entend peser sur la primaire de la droite",
-            "Media": "Paris Match (site)",
-            "Rubrique": "Politique",
-            "Chapo": "Le mouvement La Manif pour tous a appelé mercredi à une manifestation le 16 octobre pour défendre la famille «à nouveau menacée». En jeu: combattre la gestation pour autrui (GPA) et la procréation médicalement assistée (PMA). Un mois avant les primaires Républicaines, les candidats de la droite vont devoir prendre position.",
-            "Lien": "http://www.parismatch.com/Actu/Politique/La-Manif-pour-tous-entend-peser-sur-la-primaire-de-la-droite-1036768",
-            "Image": "http://resize1-parismatch.ladmedia.fr/r/625,417,center-middle,ffffff/img/var/news/storage/images/paris-match/actu/politique/la-manif-pour-tous-entend-peser-sur-la-primaire-de-la-droite-1036768/14712187-1-fre-FR/La-Manif-pour-tous-entend-peser-sur-la-primaire-de-la-droite.jpg",
-            "Signature": "oui",
-            "Portfolio": "ok",
-            "Remarque": ""
-        });
-    }
-
-
-    function generateData(jsonObj) {
-        console.log("data is " + jsonObj);
-        var myDate = document.createElement('h1');
-        console.log(myDate);
-        myDate.textContent = jsonObj['Date'];
-        jdata.appendChild(myDate);
-
-//        var myPara = document.createElement('p');
-//        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-//        header.appendChild(myPara);
-    }
-
-    function cul(jsonObj) {
-        var date = jsonObj['Date'];
-        var titre = jsonObj['Titre'];
-        var media = jsonObj['Media'];
-        var rubrique = jsonObj['Rubrique'];
-        var chapo = jsonObj['Chapo'];
-        var lien = jsonObj['Lien'];
-        var image = jsonObj['Image'];
-        jdata.appendChild(date);
-    }
-
-</script>
 </body>
 </html>

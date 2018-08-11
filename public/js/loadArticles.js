@@ -25,7 +25,6 @@ function myFun(){
                 , 'article' + thisId);
         }
         else {
-            console.log("+++++++++++++++++++++++++");
         }
     };
     req.open("GET", "articles/" + thisId, true);

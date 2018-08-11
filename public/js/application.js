@@ -160,17 +160,37 @@ $(function() {
 
 // JSON DATA
 
+function resetSidePanel() {
+    $(".left-panel").removeClass("fixed").removeAttr('style');
+    $(".right-panel").removeClass("fixed").removeAttr('style');
+}
+
+function fixedSidePanel() {
+    var parentwidth = $(".left-panel").width();
+    $(".left-panel").addClass("fixed").width(parentwidth);
+    var parentwidth = $(".right-panel").width();
+    $(".right-panel").addClass("fixed").width(parentwidth);
+}
+
+function sidePanelState() {
+    var scroll = $(this).scrollTop();
+    $('.nav-wrapper').each(function() {
+        if (scroll < $(this).offset().top + $(this).height()) {
+            resetSidePanel();
+        } else {
+            fixedSidePanel();
+        }
+    });
+}
+
+
 $(function() {
     $(window).scroll(function() {
-        //Position du scroll + moitié de l'écran visible
-        var scroll = $(this).scrollTop();
-        $('.side-panel').each(function() {
-            if (scroll > $(this).offset().top) {
-                $(this).removeClass('right-panel')
-            } else {
-                $(this).addClass('right-panel')
-            }
-        });
+        sidePanelState();
+    });
+    $( window ).resize(function() {
+        resetSidePanel();
+        sidePanelState();
     });
 });
 
