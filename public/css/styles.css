@@ -327,3 +327,12 @@ nav{
 .fixed{
     position: fixed !important;
 }
+
+.material-icons{
+    color: black;
+    cursor: pointer;
+}
+
+#mySidenav{
+    width: 0px;
+}

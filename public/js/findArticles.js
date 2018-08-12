@@ -1,6 +1,6 @@
 
 function sortPfo(obj) {
-    if (obj.Portfolio == "ok") {
+    if (obj.Portfolio != "non") {
         return true;
     }
     return false;
