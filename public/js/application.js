@@ -206,4 +206,15 @@ function openNav() {
 /* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-} 
+}
+
+var boolNav = false;
+function toggleNav() {
+    if (boolNav) {
+        closeNav();
+    }
+    else {
+        openNav();
+    }
+    boolNav = !boolNav;
+}
