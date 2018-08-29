@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper">
         <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
           <a href="https://www.linkedin.com/in/marine-jeannin-b7520a9b/">Marine Jeannin</a>
           <a>06 62 70 23 15</a>
           <a>marinejeannin.work@gmail.com</a>
@@ -10,11 +10,11 @@
         </div>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- Use any element to open the sidenav -->
-            <li id="li-de-maggle"><span onclick="openNav()">
+            <li id="li-de-maggle">
+                <span onclick="toggleNav()">
                     <img src="../../public/img/maggle.png" id="maggle">
-                </span></li>
+                </span>
+            </li>
         </ul>
-
     </div>
 </nav>
